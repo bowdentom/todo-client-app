@@ -8,13 +8,26 @@ import TodoTextInput from './TodoTextInput'
 import { LIST_TODOS } from '../graphql/queries'
 import { CREATE_TODO, DELETE_TODO, UPDATE_TODO } from '../graphql/mutations'
 
+const apiUrl =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:4000/'
+    : process.env.REACT_APP_API_URL
+
 const client = new ApolloClient({
-  link: new HttpLink({ uri: 'https://todo-serverful-api.herokuapp.com' }),
+  link: new HttpLink({ uri: apiUrl }),
   cache: new InMemoryCache(),
 })
 
 const App = () => {
   const [todos, setTodos] = useState([])
+
+  // TODO: Remove
+  console.log('process.env.NODE_ENV ----->', process.env.NODE_ENV)
+  console.log(
+    'process.env.REACT_APP_API_URL ----->',
+    process.env.REACT_APP_API_URL
+  )
+  console.log('apiUrl ----->', apiUrl)
 
   const fetchTodos = async () => {
     // Get a fresh list of all todos from the server
