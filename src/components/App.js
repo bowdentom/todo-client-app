@@ -9,7 +9,7 @@ import { LIST_TODOS } from '../graphql/queries'
 import { CREATE_TODO, DELETE_TODO, UPDATE_TODO } from '../graphql/mutations'
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: process.env.REACT_APP_GRAPHQL_API_URL }),
+  link: new HttpLink({ uri: 'https://todo-serverful-api.herokuapp.com' }),
   cache: new InMemoryCache(),
 })
 
