@@ -21,14 +21,6 @@ const client = new ApolloClient({
 const App = () => {
   const [todos, setTodos] = useState([])
 
-  // TODO: Remove
-  console.log('process.env.NODE_ENV ----->', process.env.NODE_ENV)
-  console.log(
-    'process.env.REACT_APP_API_URL ----->',
-    process.env.REACT_APP_API_URL
-  )
-  console.log('apiUrl ----->', apiUrl)
-
   const fetchTodos = async () => {
     // Get a fresh list of all todos from the server
     try {
