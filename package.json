@@ -19,7 +19,8 @@
     "todomvc-app-css": "2.2.0"
   },
   "scripts": {
-    "start": "env-cmd .env.development react-scripts start",
+    "start": "npm run build",
+    "dev": "env-cmd .env.development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
