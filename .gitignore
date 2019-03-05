@@ -1,3 +1,8 @@
+# Dependencies
 /node_modules
 
+# Production build folder
 /build
+
+# Secret config folder
+/src/config
