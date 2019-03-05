@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { generate } from 'shortid'
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost'
 
