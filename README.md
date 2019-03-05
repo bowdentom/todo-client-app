@@ -9,8 +9,8 @@
   - [CLI](https://toolbelt.heroku.com)
   - [Free account](https://signup.heroku.com)
 
-* [Git](<(https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)>) for easy deployment to Heroko
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for easy deployment to Heroko
 
-* [Node.js]https://nodejs.org) for running the api server
+* [Node.js](https://nodejs.org) for running the api server
 
 * npm or yarn
