@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { generate } from 'shortid'
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost'
 
 import TodoItem from './TodoItem'
 import TodoTextInput from './TodoTextInput'
@@ -13,7 +14,7 @@ const client = new ApolloClient({
 })
 
 const App = () => {
-  const [todos, setTodos] = useState(initialTodos)
+  const [todos, setTodos] = useState([])
 
   const fetchTodos = async () => {
     // Get a fresh list of all todos from the server
